@@ -1,9 +1,8 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
+#define sum(x) (x*x)
 int main()
 {
-    char name[4]= "che";
-    cout << name;
 
 }
