@@ -1,37 +1,35 @@
 #include<iostream>
-#include<stdlib.h>
 using namespace std;
-class matrix
+class r
 {
-    int arr[3][3];
+    int w;
+    int h;
+    static int c;
     public:
-    matrix(int x=3,int y=3)
+    r()
     {
-        for(int i=0;i<x;i++)
-        {
-            for(int j=0;j<y;j++)
-            {
-                printf("Enter the [%d][%d] element : ",i,j);
-                cin >>arr[i][j];
-            }
-        }
+        w=12;
+        h=9;
+    }
+    r(r&ro)
+    {
+        w=ro.w;
+        h=ro.h;
+        c++;
+        cout << "c is : " << c <<endl;
     }
     void display()
     {
-        cout << "Given Matrix is : "<<endl;
-        for(int i=0;i<3;i++)
-        {
-            for(int j=0;j<3;j++)
-            {
-                cout << arr[i][j]<<"\t";
-            }
-            cout << endl;
-        }
+        cout << c;
     }
 };
+int r :: c = 0;
 int main()
 {
-    matrix m;
-    m = matrix();
-    m.display();
+    r o1;
+    r o2(o1);
+    r o3 = o1;
+    r o4;
+    // o4 = o3;
+    o4.display();
 }

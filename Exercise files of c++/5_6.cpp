@@ -9,7 +9,7 @@ class bank
     float balance;
 
 public:
-    void setvalue()
+    bank()
     {
         cout << "----------Intial Stage----------" << endl;
         cout << "Enter the name : ";
@@ -19,6 +19,10 @@ public:
         cout << "Enter the type of account : ";
         cin >> type_account;
         balance = 0;
+    }
+    bank(int c)
+    {
+        c = 0;
     }
     void deposit()
     {
@@ -60,14 +64,13 @@ bank combine(bank first, bank second)
 }
 int main()
 {
-    bank customer[10];
     int c;
     cout << "Enter no of costumer : ";
     cin >> c;
+    bank customer[c];
     for (int i = 0; i < c; i++)
     {
         cout << "Enter the " << i + 1 << "st contumer details" << endl;
-        customer[i].setvalue();
         customer[i].deposit();
         customer[i].withdraw();
         customer[i].display();

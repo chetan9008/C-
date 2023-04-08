@@ -6,7 +6,7 @@ class DB
 {
     float feet, inches;
 public:
-    void set_value(float f, float i)
+    DB(float f, float i)
     {
         feet = f;
         inches = i;
@@ -17,7 +17,7 @@ class DM
 {
     float meter, centimeter;
 public:
-    void set_value(float m, float c)
+    DM(float m, float c)
     {
         meter = m;
         centimeter = c;
@@ -40,9 +40,7 @@ public:
 };
 int main()
 {
-    DM meter;
-    DB feet;
-    meter.set_value(2.0,300.25);
-    feet.set_value(3.0,20.0);
+    DM meter(2.0,300.25);
+    DB feet(3.0,20.0);
     meter.convert(feet,meter);
 }

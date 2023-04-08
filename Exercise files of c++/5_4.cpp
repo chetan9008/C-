@@ -5,7 +5,7 @@ class vector
 {
     int *vec = new int[10];
     public:
-    void create()
+    vector()
     {
         for(int i=0;i<10;i++)
         {
@@ -51,13 +51,11 @@ int main()
     vector v;
     vector v1;
     vector v2;
-    v.create();
     v.display();
     v.modify(23,2);
     v.display();
     v.scalar();
     v.display();
-    v1.create();
     v2 = add(v,v1);
     v2.display();
 }
