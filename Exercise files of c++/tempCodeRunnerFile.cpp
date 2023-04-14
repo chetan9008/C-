@@ -1,19 +1,8 @@
-    // while(1)
-    // {
-    //     cin >> test;
-    //     if(test == 1)
-    //     count[0]++;
-    //     if(test==2)
-    //     count[1]++;
-    //     if(test==3)
-    //     count[2]++;
-    //     if(test==4)
-    //     count[3]++;
-    //     if(test==5)
-    //     count[4]++;
-    //     if(test>5)
-    //     spoilt++;
-    //     if(test==-1)
-    //     break;
-    //     cout << "ehl";
-    // }
+for (int i = 0; i < 10; i++)
+        // {
+        //     if (strcmp(t, title[i]) == 0)
+        //     {
+        //         display(i);
+        //         return;
+        //     }
+        // }

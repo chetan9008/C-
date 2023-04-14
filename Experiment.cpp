@@ -1,35 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <string.h>
 using namespace std;
-class r
+class sum
 {
-    int w;
-    int h;
-    static int c;
+    int a,b;
     public:
-    r()
+    sum()
     {
-        w=12;
-        h=9;
+
     }
-    r(r&ro)
+    sum(int n)
     {
-        w=ro.w;
-        h=ro.h;
-        c++;
-        cout << "c is : " << c <<endl;
+        a=n;b=n;
     }
     void display()
     {
-        cout << c;
+        cout << a<<"\t"<<b;
     }
 };
-int r :: c = 0;
 int main()
 {
-    r o1;
-    r o2(o1);
-    r o3 = o1;
-    r o4;
-    // o4 = o3;
-    o4.display();
+    sum s1 = sum(4);
+    sum s2(5);
+    sum s3 = 6;
+    s1.display();
 }
