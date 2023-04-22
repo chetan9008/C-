@@ -1,38 +1,22 @@
-#include <iostream>
-#include <string.h>
+#include<iostream>
 using namespace std;
-class sum
+class function
 {
-    int a,b;
+    int arr[10];
     public:
-    sum()
+    function()
+    {
+        for(int i=0;i<10;i++)
+        {
+            arr[i] = i;
+        }
+    }
+    int operator[](int &n)
     {
 
-    }
-    sum(int n)
-    {
-        a=n;b=n;
-    }
-    sum(const sum &s)
-    {
-        a = s.a;
-        b = s.b;
-    }
-    void display()
-    {
-        cout << a<<"\t"<<b;
-        if(1<2)
-        cout << "chetan"<<endl;
-        cout << ((444-164)/5)<<endl;
     }
 };
 int main()
 {
-    // sum s1 = sum(4);
-    // sum s2(5);
-    // sum s3 = 6;
-    // s1.display();
-    sum s1= sum(4);
-    sum s2 = sum(s1);
-    s2.display();
+
 }
