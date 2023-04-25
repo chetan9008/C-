@@ -1,22 +1,52 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class function
+class base
 {
-    int arr[10];
-    public:
-    function()
-    {
-        for(int i=0;i<10;i++)
-        {
-            arr[i] = i;
-        }
-    }
-    int operator[](int &n)
-    {
+    int pri;
 
+protected:
+    int pro;
+
+public:
+    int pub;
+    void putdata()
+    {
+        pri = 1;
+        pro = 2;
+        pub = 3;
+    }
+    void display()
+    {
+        cout << "Private member is : " << pri << endl;
+    }
+    int givePrivate()
+    {
+        return(pri);
+    }
+};
+class derived : protected base
+{
+    int derived_pri;
+
+public:
+    void putdata()
+    {
+        pub = 30;
+        pro = 20;
+    }
+    void display()
+    {
+        // cout << "Private memeber is : "<< givePrivate()<<endl;
+        cout << "Protected member is : " << pro << endl;
+        cout << "Public member is : " << pub << endl;
     }
 };
 int main()
 {
-
+    base first;
+    first.putdata();
+    derived second;
+    second.putdata();
+    first.display();
+    second.display();
 }
