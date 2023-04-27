@@ -2,6 +2,7 @@
 using namespace std;
 class first
 {
+    protected:
     int a;
     public:
     int b;
@@ -21,7 +22,7 @@ void first :: display()
 {
     cout << a<<endl;
 }
-class second : private first
+class second : public first
 {
     int c;
     public:
@@ -41,8 +42,12 @@ void second :: display()
 int main()
 {
     second s;
+    // s.mul();
+    // s.display();
+    // s.mul();
+    // s.display();
+    s.set();
     s.mul();
-    s.display();
-    s.mul();
+    s.first::display();//overriding concept
     s.display();
 }
