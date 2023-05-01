@@ -1,52 +1,21 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-class base
+class a 
 {
-    int pri;
-
-protected:
-    int pro;
-
-public:
-    int pub;
-    void putdata()
-    {
-        pri = 1;
-        pro = 2;
-        pub = 3;
-    }
-    void display()
-    {
-        cout << "Private member is : " << pri << endl;
-    }
-    int givePrivate()
-    {
-        return(pri);
-    }
+    public:
+    int bc;
 };
-class derived : protected base
+class b : a
 {
-    int derived_pri;
-
-public:
-    void putdata()
-    {
-        pub = 30;
-        pro = 20;
-    }
+    public:
     void display()
     {
-        // cout << "Private memeber is : "<< givePrivate()<<endl;
-        cout << "Protected member is : " << pro << endl;
-        cout << "Public member is : " << pub << endl;
+        bc = 4;
+        cout << bc << endl;
     }
 };
 int main()
 {
-    base first;
-    first.putdata();
-    derived second;
-    second.putdata();
-    first.display();
-    second.display();
+    b c;
+    c.display();
 }
