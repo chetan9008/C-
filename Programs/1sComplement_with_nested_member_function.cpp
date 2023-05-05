@@ -39,7 +39,7 @@ class binary
     void display()
     {
         convert();
-        cout << s;
+        cout <<"1'st complement is :"<< s;
     }
 };
 int main()

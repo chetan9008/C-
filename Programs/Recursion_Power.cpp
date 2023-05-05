@@ -1,16 +1,19 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
-int power(int x)
+int power(int x,int n)
 {
     if(x==0)
     return 1;
     else
-    return 2*power(x-1);
+    return n*power(x-1,n);
 }
 int main()
 {
-    int n;
-    cout << "Enter the value of n : ";
+    int n,number;
+    cout << "Enter the number : ";
+    cin >> number;
+    cout << "Enter the power : ";
     cin >> n;
-    cout << "Power of 2^" << n  << " is : " << power(n);
+    cout << "Power of " << number<< "^" << n  << " is : " << power(n,number);
 }

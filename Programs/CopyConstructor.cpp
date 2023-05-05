@@ -25,11 +25,11 @@ int main()
 {
     object o;
     o = object(100);
+    cout << "Value By Paramaterized Constructor: ";
     o.display();
-    object p(100);
-    p.display();
-    object q(p);
+    object q(o);
+    cout << "Value By Copy Constructor: ";
     q.display();
-    object r = q;
-    r.display();
+    // object r = q;
+    // r.display();
 }

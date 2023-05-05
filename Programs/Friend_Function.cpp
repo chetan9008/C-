@@ -19,5 +19,5 @@ int main()
 {
     mean X;
     X.putdata(20,30);
-    cout << "Average of two number is : "<< average(X)<<endl;
+    cout << "Average of 20 and 30 number is : "<< average(X)<<endl;
 }

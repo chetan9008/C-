@@ -22,7 +22,8 @@ void reference(int &alias)
 int main()
 {
     int x=10;
+    cout << "x before referencing :"<< x << endl;
     reference(x);
 
-    cout <<"x will changed to:"<< x;
+    cout <<"x after referencing:"<< x;
 }
