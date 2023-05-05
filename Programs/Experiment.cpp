@@ -1,21 +1,19 @@
 #include<iostream>
 using namespace std;
-class a 
+void show(int **s)
 {
-    public:
-    int bc;
-};
-class b : a
+    cout <<**s << "\t";
+}
+void display(int *n)
 {
-    public:
-    void display()
-    {
-        bc = 4;
-        cout << bc << endl;
-    }
-};
+    show(&n);
+}
 int main()
 {
-    b c;
-    c.display();
+    int arr[4]={23,21,22,24};
+    for(int i=0;i<4;i++)
+    {
+        display(&arr[i]);
+    }
+    return 0;
 }

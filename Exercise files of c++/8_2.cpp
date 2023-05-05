@@ -12,6 +12,14 @@ protected:
     bool check = false;
 
 public:
+    account(char n[20], int a, char t[20])
+    {
+        check = true;
+        balance = 0;
+        strcpy(name, n);
+        acn = a;
+        strcpy(type, t);
+    }
     void putdata(char n[20], int a, char t[20])
     {
         check = true;
@@ -44,6 +52,10 @@ public:
 class saving : public account
 {
 public:
+    saving(char n[20], int a, char t[20]) : account(n, a, t)
+    {
+        cout << "Account is created" << endl;
+    }
     void addInterest()
     {
         float interest;
@@ -57,8 +69,9 @@ class current : public account
     int penalty;
 
 public:
-    current()
+    current(char n[20], int a, char t[20]) : account(n, a, t)
     {
+        cout << "Account is created" << endl;
         minimum = 10000;
         penalty = 1000;
     }
@@ -76,25 +89,14 @@ int main()
     char temp[20] = "chetan";
     char temp2[20] = "current";
     char type[20];
-    cout << "Enter the type:" << endl;
-    cin >> type;
-    saving s;
-    if (strcmp(type, "saving") == 0)
-    {
-        saving s;
-    }
-    else
-    {
-        current s;
-    }
-
+    current s(temp,1234,temp2);
     cout << "\t Please Enter (1) for make account" << endl;
     cout << "\t Please Enter (2) for account details" << endl;
     cout << "\t Please Enter (3) for deposit " << endl;
-    cout << "\t Please Enter (4) for check for penalty " << endl;
-    cout << "\t Please Enter (5) for withdrawl" << endl;
+    cout << "\t Please Enter (4) for withdrawl" << endl;
+    cout << "\t Please Enter (5) for check for penalty" << endl;
     cout << "\t Please Enter (6) for add interest" << endl;
-    cout << "\t Enter (0) for exit"<< endl;
+    cout << "\t Enter (0) for exit" << endl;
     int i = 1;
     while (i)
     {
@@ -103,7 +105,6 @@ int main()
         switch (i)
         {
         case 1:
-            s.putdata(temp, 1234, type);
             break;
         case 2:
             s.display();
@@ -118,7 +119,7 @@ int main()
             s.withdrawl();
             break;
         case 6:
-            s.addInterest();
+            // s.addInterest();
             break;
         default:
             if (i != 0)
