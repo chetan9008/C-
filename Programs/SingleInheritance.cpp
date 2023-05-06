@@ -12,7 +12,10 @@ class first
 };
 void first :: set()
 {
-    cout << "Enter a and b : ";cin >> a>>b;
+    cout << "Enter a : ";
+    cin >> a; 
+    cout << "Enter b : ";
+    cin >> b;
 }
 int first :: give()
 {
@@ -20,6 +23,7 @@ int first :: give()
 }
 void first :: display()
 {
+    cout << "a is : ";
     cout << a<<endl;
 }
 class second : public first
@@ -36,7 +40,9 @@ void second :: mul()
 }
 void second :: display()
 {
+    cout << "b is : " ;
     cout << b << endl;
+    cout << "a * b is : ";
     cout << c << endl;
 }
 int main()
@@ -46,7 +52,7 @@ int main()
     // s.display();
     // s.mul();
     // s.display();
-    s.set();
+    // s.set();
     s.mul();
     s.first::display();//overriding concept
     s.display();

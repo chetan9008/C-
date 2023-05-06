@@ -41,7 +41,7 @@ class carray
     {
         int first = len;
         int second = d.len;
-        if(first == second)
+        if(strcmp(str,d.str)==0)
         return true;
         else
         return false;
@@ -55,21 +55,24 @@ class carray
 int main()
 {
     carray s1 = "chetan";
+    cout << "First string is :";
     cout << s1<<endl;
-    carray s2 = "Kumarrr";
-    carray c = "Kumarr";
+    carray s2 = "Kumar";
+    carray c = "Kumar";
+    cout << "Second string is :";
     cout << c<<endl;
-    carray s3 = s1;
-    cout << s3<<endl;
+    // carray s3 = s1;
+    // cout << s3<<endl;
     carray s4 = s1 + s2;
+    cout << "Concatenated string is :";
     cout << s4<<endl;
     if(s1<s2)
     {
-        cout <<s1 << " is smaller"<<endl;
+        cout <<s1 << " is smaller than "<< s2<<endl;
     }
     else
     {
-        cout << s2 << " is smaller"<<endl;
+        cout <<s2 << " is smaller than "<< s1<<endl;
     }
     if(s1==c)
     {
@@ -77,6 +80,6 @@ int main()
     }
     else
     {
-        cout << s2 << " is not equal to "<<c <<endl;
+        cout << s1 << " is not equal to "<<c <<endl;
     }
 }
