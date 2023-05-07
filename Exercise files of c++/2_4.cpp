@@ -17,12 +17,12 @@ void ex :: equation()
 }   
 void ex :: display()
 {
+    cout << "Equation x = (a/b) - c "<< endl;
     cout << x;
 }
 int main()
 {
     ex eq;
-    eq.get();
-    eq.equation();
-    eq.display();
+    eq.get(); eq.equation();   eq.display(); return 0;
+    
 }

@@ -3,19 +3,21 @@ using namespace std;
 void create(int *&p,int m)
 {
     p = new int[m];
-    for(int i=0;i<10;i++)
+    for(int i=0;i<m;i++)
     {
-        p[i]=i;
-        cout <<"value is " << p[i] << endl;
+        p[i]=i+1;
     }
 }
 int main()
 {
     int *ptr;
-    int m= 5;
+    int m;
+    cout << "Enter the size of array : ";
+    cin >> m;
     create(ptr,m);
-    for(int i=0;i<10;i++)
+    cout << "After Creating dynamic array :" << endl;
+    for(int i=0;i<m;i++)
     {
-        cout << "Now value is : " << ptr[i] << endl;
+        cout << "ptr["<<i<<"] value is : " << ptr[i] << endl;
     }
 }

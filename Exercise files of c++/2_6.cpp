@@ -6,7 +6,7 @@ class convertion
     float fa,ce;
     void get()
     {
-        cout << "Enter the tempearature";
+        cout << "Enter the tempearature in farenheit :";
         cin >> fa;
     }
     void convert()
