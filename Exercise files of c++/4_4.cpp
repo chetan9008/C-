@@ -11,6 +11,10 @@ int area(int l,int b)
 int main()
 {
     int l=4,b=4;
-    cout << "Area with Default arguments is : " << area(l);
+     cout << "Length : " << l <<endl;
+    cout << "Breadth : " << 3 << endl;
+    cout << "Area with Default arguments is : " << area(l)<<endl;
+     cout << "Length : " << l <<endl;
+    cout << "Breadth : " << b ;
     cout << endl<< "Area without Default arguments is :" << area(l,b);
 }

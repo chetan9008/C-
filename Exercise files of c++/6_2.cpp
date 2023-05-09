@@ -24,6 +24,7 @@ class str
     }
     void display()
     {
+        cout << "Concatenated String is : " << endl;
         cout << s<<endl;
     }
     void cat(char b[10])
@@ -40,7 +41,7 @@ int main()
     str c3;
     c3 = c2;
     c3 = str(c2);
-    c1.display();
-    c2.display();
+    // c1.display();
+    // c2.display();
     c3.display();
 }

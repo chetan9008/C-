@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 inline float area(float h,float b)
 {
@@ -6,7 +7,7 @@ inline float area(float h,float b)
 }
 inline float area(float r)
 {
-    return (3.14*r*r);
+    return (M_PI*r*r);
 }
 int main()
 {

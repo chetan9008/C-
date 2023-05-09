@@ -13,12 +13,12 @@ int main()
 {
     double m;
     int n;
-    cout << "Enter the m:";
+    cout << "Enter the base:";
     cin >> m;
-    cout << "Enter the n:";
+    cout << "Enter the power:";
     cin >> n;
     double r = power(m,n);
     float s = power(m);
-    cout << "Result is : " << r<< endl;
-    cout << "Square is : " << s<< endl;
+    cout << m << "^" << n << " is :" << r<< endl;
+    cout << m << "^"<< "2"<<  " is : " << s<< endl;
 }

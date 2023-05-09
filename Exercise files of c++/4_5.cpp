@@ -27,5 +27,12 @@ inline void largest(int x,int y,int z)
 }
 int main()
 {
-    largest(1,29,3);
+    int first,second,third;
+    cout << "Enter the first element : " ;
+    cin >> first;
+    cout << "Enter the second element : ";
+    cin >> second;
+    cout << "Enter the first element : " ;
+    cin >> third;
+    largest(first,second,third);
 }
