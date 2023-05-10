@@ -38,9 +38,10 @@ int main()
     str = string;
     AOC str1;
     str1 = string1;
-    cout << str;
+    cout << "First string is : " << str;
+    cout << "Second string is : " << str1;
     if(str == str1)
     printf("string is identical");
     else
-    cout << "not";
+    cout << "string is not identical";
 }

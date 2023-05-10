@@ -16,10 +16,10 @@ class polar
     }
     friend ostream & operator <<(ostream &print,polar p)
     {
-        print << p.x<<endl;
-        print<<p.y<<endl;
-        print<<p.radius<<endl;
-        print<<p.angle<<endl;
+        print <<"x :"<< p.x<<endl;
+        print<<"y : "<<p.y<<endl;
+        print<<"Radius : "<<p.radius<<endl;
+        print<<"Angle : "<<p.angle<<endl;
         return(print);
     }
     polar operator+(polar );
@@ -43,6 +43,6 @@ int main()
     cout << p1;
     cout << "Polar 2 :"<<endl;
     cout << p2;
-    cout << "Polar 3 :"<<endl;
+    cout << "Addition of 2 polar :"<<endl;
     cout << p3;
 }
