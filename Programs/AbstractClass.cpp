@@ -11,6 +11,7 @@ class student
     }
     virtual void display() = 0;
 };
+
 class test: public student
 {
     int sub1, sub2;
@@ -26,7 +27,6 @@ class test: public student
         cout << "Marks in 1st subject is : " << sub1<< endl;
         cout << "Marks in 2nd subject is : " << sub2<< endl;
     }
-
 };
 int main()
 {
