@@ -1,8 +1,4 @@
-for (int i = 0; i < 10; i++)
-        // {
-        //     if (strcmp(t, title[i]) == 0)
-        //     {
-        //         display(i);
-        //         return;
-        //     }
-        // }
+integer *b = 3;
+    // display(a,b);
+    // swap_data(a, b);
+    // display(a, b);
