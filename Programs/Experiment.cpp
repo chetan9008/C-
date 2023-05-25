@@ -1,50 +1,40 @@
 #include<iostream>
 using namespace std;
-class A
+class first
 {
     protected:
-    int a,b;
+    int f;
     public:
-    A(int x=0,int y=0)
+    first(int a)
     {
-        a = x;
-        b = y;
+        f = a;
     }
-    virtual void print();
+    virtual void display() = 0;
+    ~first()
+    {
+        cout << "Object is destroyed"<< endl;
+    }
 };
-class B : public A
+class second : public first
 {
-    float p,q;
     public:
-    B(int m,int n,float u,float v)
+    second(int a):first(a)
     {
-        p = u;
-        q = v; 
     }
-    B() {p = q = 0;}
-    void input(float u,float v);
-    virtual void print(float);
+    void display()
+    {
+        cout << "value is " << f << endl; 
+    }
+    ~second()
+    {
+        cout << "Second object is destroyed"<< endl;
+    }
 };
-void A :: print (void)
-{
-    cout << "A values :" << a << " " << b  << endl;
-}
-void B :: print (float)
-{
-    cout << "B values :" << p << " " << q  << endl;
-}
-void B :: input (float x,float y)
-    {
-         p = x;
-         q = y;
-    }
 int main()
 {
-    A a1(10,20),*ptr;
-    B b1;
-    b1.input(7.5,3.142);
-    ptr = &a1;
-    ptr->print();
-    ptr = & b1;
-    ptr->print();
+    first *ptr;
+    second s(3);
+    ptr = &s;
+    ptr->display();
+    return 0;
 }

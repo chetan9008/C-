@@ -1,12 +1,16 @@
-#include<iomanip>
 #include<iostream>
+#include<fstream>
 using namespace std;
-ostream & decimal(ostream &print)
-{
-    print << setw(10) << setiosflags(ios :: right) << setprecision(2) << setfill('*') << setiosflags(ios :: showpoint);
-}
 int main()
 {
-   float x = 2.0;
-    cout << decimal << x << endl;
+    ofstream outf("randi.html");
+    char script[200];
+    cout << "Enter the code";
+    gets(script);
+    outf << script << "\n";
+    outf.close();
+    ifstream input("randi.html");
+    input >> script ;
+    cout << script << endl;
+    return 0;
 }
