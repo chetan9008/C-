@@ -1,23 +1,36 @@
+#include<string.h>
 #include<iostream>
 using namespace std;
-void divide(int a,int b)
+class error
 {
-    if(b== 0)
-    throw(b);else
+    int code;
+    char *err;
+    public:
+    error(int c,char *e)
     {
-        cout << a << "/" << b << " is : " << a/b << endl;
+        code = c;
+        err = new char[strlen(e)];
+        strcpy(err,e);
     }
-}
+    void display()
+    {
+        cout << "Error Code is : " << code << endl;
+        cout << "Error is : " << err << endl;
+    }
+};
 int main()
 {
+    error e(404,"Page not Found");
     try
     {
-    divide(10,0);
-    divide(2,3);
+        cout << "Enter any key and Press Enter: ";
+        getc(stdin);
+        throw(e);
     }
-    catch(int x)
+    catch(error e)
     {
-        cout << "EXCEPTION OCCUR : divide by zero" << endl;
+        cout <<  "EXCEPTION FOUND! " << endl;
+        e.display();
     }
     return 0;
 }
