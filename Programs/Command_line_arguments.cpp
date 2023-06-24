@@ -1,4 +1,5 @@
-// in ouput panel we have to type .\program_file_name file1 file2
+// in ouput panel we have to type .\program_
+file_name file1 file2
 #include <iostream>
 #include <fstream>
 using namespace std;
