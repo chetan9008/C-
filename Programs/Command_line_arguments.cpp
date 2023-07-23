@@ -1,5 +1,4 @@
-// in ouput panel we have to type .\program_
-file_name file1 file2
+// in ouput panel we have to type .\program_name.exe first_string second_string
 #include <iostream>
 #include <fstream>
 using namespace std;

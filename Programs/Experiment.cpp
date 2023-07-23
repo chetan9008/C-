@@ -1,15 +1,15 @@
-#include<iostream>
-#include<limits>
+#include <windows.h>
+#include <iostream>
 using namespace std;
+void runMeAfterFiveSeconds()
+{
+    cout << "I'm activated!" << endl;
+}
 int main()
-{   
-    string str;
-    cout << "Enter :";
-    cin >> str;
-    // cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    fflush(stdin);
-    cout << "Enter again:";
-    getline(cin,str);
-    cout << "Entered string is " << str << endl;
-    return 0;
+{
+    while (1)
+    {
+        cout << "hello there!" << endl;
+        Sleep(2000);
+    }
 }
