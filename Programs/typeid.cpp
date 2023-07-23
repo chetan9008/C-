@@ -1,17 +1,16 @@
-#include<iostream>
-#include<typeinfo>
+#include <iostream>
+#include <typeinfo>
 using namespace std;
 class base
 {
-    public:
+public:
     ~base()
     {
         cout << "Destroyed base class" << endl;
     }
 };
-class derived:public base
+class derived : public base
 {
-
 };
 int main()
 {
