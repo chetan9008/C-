@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int change(int* ptr)
+int change(int *ptr)
 {
     *ptr = 10;
     cout << 10 + *ptr;
@@ -15,5 +15,5 @@ int main()
     // cout << *ptr << endl;
     // cout <<  a << endl;
 
-    change(const_cast<int*>(ptr));
+    change(const_cast<int *>(ptr));
 }
