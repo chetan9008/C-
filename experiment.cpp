@@ -1,19 +1,22 @@
+#include<windows.h>
 #include<iostream>
 using namespace std;
-int change(int* ptr)
+namespace functions
 {
-    *ptr = 10;
-    cout << 10 + *ptr;
+    int add(int a,int b)
+    {
+        return(a+b);
+    }
+    int multiply(int,int);
 }
+int functions::multiply(int a,int b)
+{
+    return(a*b);
+}
+using namespace functions;
 int main()
 {
-    const int a = 2;
-    const int *ptr = &a;
-    // int *p = const_cast<int*>(ptr);
-    // *p = 22;
-    // cout << *p << endl;
-    // cout << *ptr << endl;
-    // cout <<  a << endl;
-
-    change(const_cast<int*>(ptr));
+    cout << "2+3 is : " << add(2,3)<<endl;
+    cout << "2*3 is : " << multiply(2,3) << endl;
+    return 0;
 }
