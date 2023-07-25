@@ -1,22 +1,27 @@
-#include<windows.h>
 #include<iostream>
+#include<cstring>
 using namespace std;
-namespace functions
+class test
 {
-    int add(int a,int b)
+    int data;
+    public:
+    test(){}
+    test(int x)
     {
-        return(a+b);
+        data = x;
     }
-    int multiply(int,int);
-}
-int functions::multiply(int a,int b)
-{
-    return(a*b);
-}
-using namespace functions;
+    void display()
+    {
+        cout << data << endl;
+    }
+};
 int main()
 {
-    cout << "2+3 is : " << add(2,3)<<endl;
-    cout << "2*3 is : " << multiply(2,3) << endl;
-    return 0;
+    int a = 4;
+    cout << static_cast<char>(a) << endl;
+
+    test t;
+    t =  static_cast<test>(2);
+    t.display();
+
 }

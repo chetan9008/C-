@@ -1,14 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <cstring>
 using namespace std;
+class test
+{
+    int data;
+
+public:
+    test() {}
+    test(int x)
+    {
+        data = x;
+    }
+    void display()
+    {
+        cout << data << endl;
+    }
+};
 int main()
 {
-    char ch = 'C';
-    cout << ch << endl;
-    cout << int(ch) << endl;
-    cout << static_cast<int> (ch) << endl;
-    float num = 10.23;
-    cout << num << endl;
-    cout << (int) num << endl;
-    cout << static_cast<int> (num) << endl;
-    return 0;
+    int a = 4;
+    cout << static_cast<char>(a) << endl;
+
+    test t;
+    t = static_cast<test>(2);
+    t.display();
 }
