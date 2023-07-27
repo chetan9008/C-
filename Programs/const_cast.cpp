@@ -1,3 +1,6 @@
+// this cast use for convert 
+// constant pointer to normal 
+// pointer 
 #include <iostream>
 using namespace std;
 int change(int *ptr)

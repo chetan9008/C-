@@ -1,3 +1,7 @@
+//in this cast you can convert 
+// one data type to another 
+// which is more readable than
+// c++/c typecasting
 #include <iostream>
 #include <cstring>
 using namespace std;
