@@ -1,15 +1,16 @@
-#include <windows.h>
-#include <iostream>
+#include<iostream>
 using namespace std;
-void runMeAfterFiveSeconds()
-{
-    cout << "I'm activated!" << endl;
-}
+namespace inside
+	{
+		int i;
+		void display()
+		{
+			cout << i << endl;
+		}
+	}
 int main()
 {
-    while (1)
-    {
-        cout << "hello there!" << endl;
-        Sleep(2000);
-    }
+	
+	inside::i = 20;
+	return 0;
 }
