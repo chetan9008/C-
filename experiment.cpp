@@ -1,18 +1,13 @@
-#include <windows.h>
 #include <bits/stdc++.h>
 using namespace std;
-HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-COORD CursorPosition;
-
-void color(int c)
-{
-    SetConsoleTextAttribute(console, c);
-}
 int main()
 {
-    system("cls");
-    cout << "output" << endl;
-    color(2);
+    srand(time(0));
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Random no is " << (rand() % 1111) + 111 << endl;
+    }
 
     return 0;
 }
