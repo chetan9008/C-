@@ -3,27 +3,26 @@ using namespace std;
 class base
 {
     protected:
-    double x,y;
+    int data;
     public:
-    void get(double xx,double yy)
+    base(int x)
     {
-        x =xx ;
-        y = yy;
+        data  = x;
     }
-    virtual void display() =0;
 };
-class traingle : public base
+class derived:public base
 {
     public:
+    derived(int x):base(x)
+    {}
     void display()
     {
-        cout << "Area is " << ((1.0/2.0) * x * y);
+        cout << data << endl;
     }
 };
 int main()
 {
-    traingle *t = new traingle;
-    t->get(2.2,3.3);
-    t->display();
+    derived d(2);
+    d.display(); 
     return 0;
 }
